@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Test Incidence SDK
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Test Incidence Plugin</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-button expand="block" (click)="addDevice()">Beacon synchronization</ion-button>
+    <ion-button expand="block" (click)="checkDevice()">Check Beacon</ion-button>
+  </div>
+</ion-content>

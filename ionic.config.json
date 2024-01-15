@@ -1,0 +1,7 @@
+{
+  "name": "incidence-sdk-plugin",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
