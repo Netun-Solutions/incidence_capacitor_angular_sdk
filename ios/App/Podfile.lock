@@ -11,14 +11,14 @@ PODS:
     - Capacitor
   - CapacitorStatusBar (5.0.6):
     - Capacitor
-  - IncidenceLibraryIOS (0.0.1):
+  - IncidenceIOSSDK (0.0.2):
     - Alamofire
     - Kingfisher
     - youtube-ios-player-helper
-  - IncidenceSdk (0.0.1):
+  - IncidenceSdk (0.0.2):
     - Capacitor
-    - IncidenceLibraryIOS
-  - Kingfisher (7.10.0)
+    - IncidenceIOSSDK
+  - Kingfisher (7.10.2)
   - youtube-ios-player-helper (1.0.4)
 
 DEPENDENCIES:
@@ -28,12 +28,12 @@ DEPENDENCIES:
   - "CapacitorHaptics (from `../../node_modules/@capacitor/haptics`)"
   - "CapacitorKeyboard (from `../../node_modules/@capacitor/keyboard`)"
   - "CapacitorStatusBar (from `../../node_modules/@capacitor/status-bar`)"
-  - IncidenceLibraryIOS (from `../../plugins/incidence-sdk/IncidenceLibraryIOS`)
-  - IncidenceSdk (from `../../plugins/incidence-sdk`)
+  - IncidenceSdk (from `../../node_modules/incidence-sdk`)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - IncidenceIOSSDK
     - Kingfisher
     - youtube-ios-player-helper
 
@@ -50,10 +50,8 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/keyboard"
   CapacitorStatusBar:
     :path: "../../node_modules/@capacitor/status-bar"
-  IncidenceLibraryIOS:
-    :path: "../../plugins/incidence-sdk/IncidenceLibraryIOS"
   IncidenceSdk:
-    :path: "../../plugins/incidence-sdk"
+    :path: "../../node_modules/incidence-sdk"
 
 SPEC CHECKSUMS:
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
@@ -63,11 +61,11 @@ SPEC CHECKSUMS:
   CapacitorHaptics: 1fffc1217c7e64a472d7845be50fb0c2f7d4204c
   CapacitorKeyboard: ce5e01064cf57a2c05b32565310713b7fe6cc6f9
   CapacitorStatusBar: 565c0a1ebd79bb40d797606a8992b4a105885309
-  IncidenceLibraryIOS: 3c79b9077b059a4f5b33ecb9433be1b59ab829f0
-  IncidenceSdk: 4153d790a36c54cf9e02f52d9f1b1e4fb67219f1
-  Kingfisher: a18f05d3b6d37d8650ee4a3e61d57a28fc6207f6
+  IncidenceIOSSDK: 616b0c6136effc844151ca0d64af85bfff05caa7
+  IncidenceSdk: 764a3b3d7eabcde4c6e6f6c2a5f1bd682aa787cb
+  Kingfisher: 99edc495d3b7607e6425f0d6f6847b2abd6d716d
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: af99bcc834be4dfd7690830f652d7b94ec5908da
+PODFILE CHECKSUM: d6fed4de5cbba93e0e8d82b38177d5952d203e8d
 
 COCOAPODS: 1.14.3

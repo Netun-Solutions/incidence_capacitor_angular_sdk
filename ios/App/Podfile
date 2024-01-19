@@ -15,12 +15,11 @@ def capacitor_pods
   pod 'CapacitorHaptics', :path => '../../node_modules/@capacitor/haptics'
   pod 'CapacitorKeyboard', :path => '../../node_modules/@capacitor/keyboard'
   pod 'CapacitorStatusBar', :path => '../../node_modules/@capacitor/status-bar'
-  pod 'IncidenceSdk', :path => '../../plugins/incidence-sdk'
+  pod 'IncidenceSdk', :path => '../../node_modules/incidence-sdk'
 end
 
 target 'App' do
   capacitor_pods
-  pod 'IncidenceLibraryIOS', :path => '../../plugins/incidence-sdk/IncidenceLibraryIOS'
   # Add your Pods here
 end
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Incidence } from '../../../plugins/incidence-sdk';
+import { Incidence } from 'incidence-sdk';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +7,8 @@ import { Incidence } from '../../../plugins/incidence-sdk';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  private apiKey: string = "aW8uaW9uaWMuc3RhcnRlcjpkOTBlMTA3ZjdhNGU1NmQyYzlkMTJhMHM3ZTQ1ZDQ1MQ==";
+  private environment: string = "pre"; // pre / pro
   private user: any;
   private vehicle: any;
   private incidence: any;
@@ -39,7 +40,6 @@ export class HomePage {
     this.vehicle.dni = this.user.dni; // (documento de identidad del asegurador)
 
     this.incidence = {};
-    this.incidence.typeId = 5; // Pinchazo
     this.incidence.typeExternalId = "B0"; // Pinchazo
     this.incidence.street = "Carrer Major, 2";
     this.incidence.city = "Barcelona";
@@ -50,7 +50,8 @@ export class HomePage {
   }
   
   ionViewDidEnter(){
-    Incidence.initConfig().then((res: any) => 
+
+    Incidence.initConfig({apikey: this.apiKey, environment: this.environment}).then((res: any) => 
       alert(JSON.stringify(res))
     );
   }
@@ -63,6 +64,30 @@ export class HomePage {
 
   checkDevice(){
     Incidence.checkDevice({user: this.user,vehicle: this.vehicle}).then(res => 
+      alert(JSON.stringify(res))
+    );
+  }
+
+  deleteDevice(){
+    Incidence.deleteDevice({user: this.user,vehicle: this.vehicle}).then(res => 
+      alert(JSON.stringify(res))
+    );
+  }
+
+  createIncidence(){
+    Incidence.createIncidence({user: this.user,vehicle: this.vehicle,incidence: this.incidence}).then(res => 
+      alert(JSON.stringify(res))
+    );
+  }
+
+  createIncidenceFlow(){
+    Incidence.createIncidenceFlow({user: this.user,vehicle: this.vehicle}).then(res => 
+      alert(JSON.stringify(res))
+    );
+  }
+
+  closeIncidence(){
+    Incidence.closeIncidence({user: this.user,vehicle: this.vehicle,incidence: this.incidence}).then(res => 
       alert(JSON.stringify(res))
     );
   }

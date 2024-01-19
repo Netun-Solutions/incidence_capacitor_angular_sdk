@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'incidence-sdk-plugin',
+  appName: 'incidence-sdk-plugin-v2',
   webDir: 'www',
   server: {
     androidScheme: 'https'

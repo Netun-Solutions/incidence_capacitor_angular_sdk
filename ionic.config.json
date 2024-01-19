@@ -1,5 +1,5 @@
 {
-  "name": "incidence-sdk-plugin",
+  "name": "incidence-sdk-plugin-v2",
   "integrations": {
     "capacitor": {}
   },

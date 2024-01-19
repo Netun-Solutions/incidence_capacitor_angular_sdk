@@ -1,5 +1,5 @@
 {
-  "name": "incidence-sdk-plugin",
+  "name": "incidence-sdk-plugin-v2",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -29,7 +29,7 @@
     "@capacitor/keyboard": "5.0.7",
     "@capacitor/status-bar": "5.0.6",
     "@ionic/angular": "^7.0.0",
-    "incidence-sdk": "file:plugins/incidence-sdk",
+    "incidence-sdk": "^0.0.2",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
