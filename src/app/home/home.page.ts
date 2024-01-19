@@ -7,7 +7,7 @@ import { Incidence } from 'incidence-sdk';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  private apiKey: string = "aW8uaW9uaWMuc3RhcnRlcjpkOTBlMTA3ZjdhNGU1NmQyYzlkMTJhMHM3ZTQ1ZDQ1MQ==";
+  private apiKey: string = "XXX";
   private environment: string = "pre"; // pre / pro
   private user: any;
   private vehicle: any;
