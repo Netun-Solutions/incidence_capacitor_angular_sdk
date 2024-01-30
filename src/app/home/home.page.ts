@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Incidence } from 'incidence-sdk';
+import { Incidence } from '../../../plugins/incidence-sdk';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +7,7 @@ import { Incidence } from 'incidence-sdk';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  private apiKey: string = "XXX";
+  private apiKey: string = "XXXX";
   private environment: string = "pre"; // pre / pro
   private user: any;
   private vehicle: any;
@@ -19,25 +19,25 @@ export class HomePage {
     this.user.name = "Nombre TEST"; // (nombre del usuario)
     this.user.phone = "647893678"; // (teléfono)
     this.user.email = "sdkm1@tridenia.com"; // (e-mail)
-    this.user.identityType = "dni";
-    this.user.dni = "84283234X"; // (número del documento de identidad)
-    this.user.birthday = "1979-09-29"; // (fecha de Nacimiento)
+    //this.user.identityType = "dni";
+    //this.user.dni = "84283234X"; // (número del documento de identidad)
+    //this.user.birthday = "1979-09-29"; // (fecha de Nacimiento)
     this.user.checkTerms = "1"; // (aceptación de la privacidad)
 
     this.vehicle = {};
     this.vehicle.externalVehicleId = "15001";
     this.vehicle.licensePlate = "1511XXX"; // (matrícula del vehículo)
-    this.vehicle.registrationYear = "2022"; // (fecha de matriculación)
+    //this.vehicle.registrationYear = "2022"; // (fecha de matriculación)
     this.vehicle.vehicleType = "Coche"; // (tipo del vehículo)
-    this.vehicle.brand = "Seat"; // (marca del vehículo)
-    this.vehicle.model = "Laguna"; // (modelo del vehículo)
-    this.vehicle.color = "Rojo"; // (color del vehículo)
+    //this.vehicle.brand = "Seat"; // (marca del vehículo)
+    //this.vehicle.model = "Laguna"; // (modelo del vehículo)
+    //this.vehicle.color = "Rojo"; // (color del vehículo)
 
     this.vehicle.policy = {};
-    this.vehicle.policyNumber = "111111111"; // (número de la póliza)
-    this.vehicle.policyEnd = "2024-10-09"; // (fecha caducidad de la póliza)
-    this.vehicle.identityType = this.user.identityType; // (tipo de documento identidad del asegurador)
-    this.vehicle.dni = this.user.dni; // (documento de identidad del asegurador)
+    //this.vehicle.policyNumber = "111111111"; // (número de la póliza)
+    //this.vehicle.policyEnd = "2024-10-09"; // (fecha caducidad de la póliza)
+    //this.vehicle.identityType = this.user.identityType; // (tipo de documento identidad del asegurador)
+    //this.vehicle.dni = this.user.dni; // (documento de identidad del asegurador)
 
     this.incidence = {};
     this.incidence.typeExternalId = "B0"; // Pinchazo
@@ -74,6 +74,12 @@ export class HomePage {
     );
   }
 
+  getDevice(){
+    Incidence.getDevice({user: this.user,vehicle: this.vehicle}).then(res => 
+      alert(JSON.stringify(res))
+    );
+  }
+
   createIncidence(){
     Incidence.createIncidence({user: this.user,vehicle: this.vehicle,incidence: this.incidence}).then(res => 
       alert(JSON.stringify(res))
@@ -88,6 +94,12 @@ export class HomePage {
 
   closeIncidence(){
     Incidence.closeIncidence({user: this.user,vehicle: this.vehicle,incidence: this.incidence}).then(res => 
+      alert(JSON.stringify(res))
+    );
+  }
+
+  openEcommerce(){
+    Incidence.ecommerce({user: this.user,vehicle: this.vehicle}).then(res => 
       alert(JSON.stringify(res))
     );
   }

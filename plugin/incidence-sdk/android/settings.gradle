@@ -1,0 +1,8 @@
+include ':capacitor-android'
+include ':incidenceLibrary'
+project(':capacitor-android').projectDir = new File('../node_modules/@capacitor/android/capacitor')
+dependencyResolutionManagement {
+  repositories {
+    maven {  url = uri("https://jitpack.io") }
+  }
+}
